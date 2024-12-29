@@ -34,8 +34,8 @@ nvidia-docker run \
 As an example:
 ```
 nvidia-docker run \
-  -v ~/softgym:~/softgym \
-  -v ~/software/miniconda3/:~/software/miniconda3/ \
+  -v /home/transfer/chenhn:/home/transfer/chenhn \
+  -v /home/transfer/anaconda3/:/home/transfer/anaconda3/ \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   --gpus all \
   -e DISPLAY=$DISPLAY \
@@ -47,7 +47,7 @@ This solution follows [this tutorial]( https://medium.com/@benjamin.botto/opengl
 - Now you are in the Docker environment. Go to the softgym directory and compile PyFlex
 
 ```
-export PATH="PATH_TO_CONDA/bin:$PATH"
+export PATH="/home/transfer/anaconda3/bin:$PATH"
 . ./prepare_1.0.sh && ./compile_1.0.sh
 ```
 

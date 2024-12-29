@@ -1,4 +1,4 @@
-name: softgym
+name: softgym2
 channels:
   - defaults
 dependencies:
